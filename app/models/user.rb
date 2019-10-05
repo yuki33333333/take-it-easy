@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   validates :name, presence: true
+  validates :name, length: { maximum: 15 }
   validates :email, presence: true
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i, message: "メールアドレスを入力してください。"}
   validates :password, presence: true
