@@ -1,0 +1,35 @@
+<div class="users-show-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-show-container">
+        <h1 class="text-center text-white">Account Imformation</h1>
+        <table class="table table__currentUserImformation">
+          <tr>
+            <td>
+              Name:
+            </td>
+            <td>
+              <%= @current_user.name %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Email:
+            </td>
+            <td>
+              <%= @current_user.email %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Password:
+            </td>
+            <td>
+              セキュリティの都合上表示されません
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

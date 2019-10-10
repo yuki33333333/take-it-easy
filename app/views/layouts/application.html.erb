@@ -10,16 +10,39 @@
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
+   <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
-  
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+      <div class="container">
+        <%= link_to 'Home', root_path, class: "navbar-brand" %>
+        <ul class="nav navbar-nav navbar-right">
+          <% if signed_in? %>
+            <li>
+              <%= link_to 'Setting', 'users/session[:user_id]' %>
+            </li>
+            <li>
+              <%= link_to 'Sign out', signout_path, method: :delete %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to 'Sign up', new_user_path %>
+            </li>
+            <li>
+              <%= link_to 'Sign in', signin_path %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+  <div style="margin-top:80px;">
     <%= yield %>
-    
+  </div>
     <script>
-      // $(function(){
-      //   $(".alert").fadeOut(5000);
-      // });
+      $(function(){
+        $(".alert").fadeOut(5000);
+      });
     </script>
   </body>
 </html>

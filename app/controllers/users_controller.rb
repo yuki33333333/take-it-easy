@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # Sign up 機能
   def new
     @user = User.new
   end
@@ -11,6 +12,13 @@ class UsersController < ApplicationController
       flash.now[:danger] = "登録に失敗しました"
       render :new
     end
+  end
+  # アカウントページ機能
+  def edit
+  end
+  
+  def show
+    current_user
   end
   
   private

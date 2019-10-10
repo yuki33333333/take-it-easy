@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  todo_id: MyString
+  integer: MyString
+  rating: MyString
+  integer: MyString
+  comment: MyString
+  string: MyString
+
+two:
+  todo_id: MyString
+  integer: MyString
+  rating: MyString
+  integer: MyString
+  comment: MyString
+  string: MyString
