@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   end
   # アカウントページ機能
   def edit
+    current_user
   end
   
   def show
