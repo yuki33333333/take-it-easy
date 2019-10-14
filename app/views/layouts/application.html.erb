@@ -16,9 +16,9 @@
 
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
-        <%= link_to 'Home', root_path, class: "navbar-brand" %>
         <ul class="nav navbar-nav navbar-right">
           <% if signed_in? %>
+            <%= link_to 'Home', todos_path, class: "navbar-brand" %>
             <li>
               <%= link_to 'Setting', 'users/session[:user_id]' %>
             </li>
