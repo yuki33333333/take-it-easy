@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import ToDoList from './ToDoList';
+// import axios from 'axios';
+// import { csrfToken } from 'rails-ujs';
 
 class App extends Component {
   constructor(props){
+    
+    // axios.defaults.headers.common['X-CSRF-Token'] = csrfToken();
+    
     super(props);
     this.handleDelete = this.handleDelete.bind(this)
     this.getUniqueStr = this.getUniqueStr.bind(this)
@@ -11,6 +16,21 @@ class App extends Component {
       toDoItems: [] //todoのカテゴリとタイトルを保存するstate
     }
   };
+  
+  // componentDidMount() {
+  //   axios.post('/api/todos', {
+  //     user_id: '', //ここでuser_idを渡す（index.htmi.erbから）
+  //     text: 'Hello World!'
+  //   })
+  // .then(response => {
+  //   console.log(response.data);
+  //   })
+  //   .catch(err => {
+  //     console.log(err);
+  //   });
+  // }
+  
+  
 
   handleDelete(props){
     console.log(props);
