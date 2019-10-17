@@ -4,7 +4,7 @@
       <div class="col-md-offset-4 col-md-4 users-new-container">
         <h1 class="text-center text-white">Sign up</h1>
         <!--ユーザー登録フォーム-->
-        <%= form_for @user do |f| %>
+        <%= form_for current_user do |f| %>
           <div class="form-group">
             <%= f.label :name, class: 'text-white' %>
             <%= f.text_field :name, class: 'form-control' %>
